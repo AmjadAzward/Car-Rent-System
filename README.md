@@ -4,6 +4,12 @@
 
 The objective of this project is to streamline and automate the day-to-day operations of a car rental company. The proposed system addresses the core challenges typically faced in car rental workflows by digitalizing processes such as vehicle tracking, customer handling, payment management, and more—reducing manual workload and improving efficiency.
 
+![Car Rent System Screenshot](https://raw.githubusercontent.com/AmjadAzward/Car-Rent-System/main/Extra/Images/Screenshot%202025-06-19%20152745.png)
+
+![Car Rent System Screenshot](https://raw.githubusercontent.com/AmjadAzward/Car-Rent-System/main/Extra/Images/Screenshot%202025-06-19%20152813.png)
+
+![Car Rent System Screenshot](https://raw.githubusercontent.com/AmjadAzward/Car-Rent-System/main/Extra/Images/Screenshot%202025-06-19%20152908.png)
+
 ---
 
 ##  Tech Stack
