@@ -1,8 +1,7 @@
 #  Car Rent Management System
 
-##  Objective
+The Car Rent Management System automates the workflow of a car rental agency, including customer handling, vehicle tracking, booking management, payments, and maintenance logging. It improves efficiency, supports scalable data growth, and provides clear reporting for strategic planning.
 
-The objective of this project is to streamline and automate the day-to-day operations of a car rental company. The proposed system addresses the core challenges typically faced in car rental workflows by digitalizing processes such as vehicle tracking, customer handling, payment management, and more—reducing manual workload and improving efficiency.
 
 ![Car Rent System Screenshot](https://raw.githubusercontent.com/AmjadAzward/Car-Rent-System/main/Extra/Images/Screenshot%202025-06-19%20152745.png)
 
@@ -12,161 +11,92 @@ The objective of this project is to streamline and automate the day-to-day opera
 
 ---
 
-##  Tech Stack
+##  Objectives
 
-| Category       | Details                         |
-|----------------|---------------------------------|
-| Language       | C# (C-Sharp)                   |
-| Framework      | .NET Framework / .NET 6+       |
-| UI Technology  | Windows Forms (WinForms)       |
-| IDE            | Microsoft Visual Studio 2022   |
-| Database       | Microsoft SQL Server           |
-| Reporting      | Crystal Reports               |
-| Data Access    | ADO.NET                       |
-| UI Enhancements| Guna.UI Framework             |
+* Automate car rental workflows and reduce manual operations.
+* Manage scalable customer, vehicle, and booking data.
+* Track and update car availability, rental status, and maintenance.
+* Generate detailed reports for business analysis and decision-making.
 
 ---
 
-##  Main Functionalities
+##  Development Tools and Setup Details
 
--  Car Management  
--  Customer Management  
--  Employee Management  
--  Rental (Booking) Management  
--  Payment/Billing Management  
--  Maintenance Management  
--  Supplier Management  
--  Tab-Based Navigation and User Profile Management
-
----
-
-##  System Overview
-
-The system is built using a **tab control interface** that organizes key functions into separate modules:
-
-###  Car Management
-- Add, update, delete, and view cars  
-- Fields:  
-  - ID  
-  - Model  
-  - Brand  
-  - Registration Number  
-  - Rental Price  
-  - Availability Status  
-
-###  Customer Management
-- Add, update, delete, and view customer profiles  
-- Fields:  
-  - Customer ID  
-  - Name  
-  - Phone  
-  - Driving License  
-  - Email  
-
-### 🔹 Supplier Management
-- Add, update, delete, and view suppliers  
-- Fields:  
-  - Supplier ID  
-  - Name  
-  - Phone  
-  - Email  
-  - Services Provided  
-
-###  Rental Management
-- Link cars with customers for rental processing  
-- Shows only added customers and cars — must exist in system  
-
-###  Payment Management
-- Create, update, and delete payment records for rentals  
-
-###  Maintenance Management
-- Log car service/maintenance details  
-- Fields:  
-  - Maintenance ID  
-  - Car ID  
-  - Date  
-  - Remarks  
-  - Status  
-
-###  Employee Management
-- Register and manage employees  
-- Fields:  
-  - Employee ID  
-  - Name  
-  - Position  
-  - Phone  
-  - Email  
-  - Hire Date  
+| Tool/Library               | Version  | Notes/Links                                                                                   |
+| -------------------------- | -------- | --------------------------------------------------------------------------------------------- |
+| Java SE Development Kit    | 11.0.2   | [Download JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)          |
+| Apache Ant (Build Tool)    | 1.10.13  | [Download Ant](https://ant.apache.org/bindownload.cgi)                                        |
+| Java Swing (GUI Framework) | Built-in | Comes with JDK – no separate install                                                          |
+| MySQL Database             | 8.0.23   | [Download MySQL](https://dev.mysql.com/downloads/mysql/8.0.html)                              |
+| MySQL JDBC Driver          | 8.0.23   | [Download Connector/J](https://dev.mysql.com/downloads/connector/j/)                          |
+| JasperReports              | 6.21.3   | [Download JasperReports](https://sourceforge.net/projects/jasperreports/files/jasperreports/) |
+| Apache NetBeans IDE        | 23       | [Download NetBeans](https://netbeans.apache.org/download/nb23/)                               |
 
 ---
 
-##  Installation & Setup
+##  Setup Instructions
 
-###  1. Download and Install Visual Studio
-- [Download Visual Studio 2022](https://visualstudio.microsoft.com/downloads)  
-- Select: **.NET Desktop Development** workload  
-- Install and restart if prompted  
+### 1. Install Java JDK 11.0.2
 
-###  2. Create or Open the Project
+* Download and install from Oracle
+* Set `JAVA_HOME` and update your system `PATH`
 
-#### New Project:
-- `Create a new project` → Search: **Windows Forms App**  
-- Choose:
-  - `.NET Framework` (e.g., 4.8)  
-  - or `.NET 6/7/8` for modern projects  
-- Name: `CarRentalSystem`  
-- Location: `D:\CSharpProjects`  
-- Click **Create**  
+### 2. Install Apache Ant 1.10.13
 
-#### Open Existing:
-- Open `.sln` file from folder  
+* Extract and add `ant/bin` to your system `PATH`
+
+### 3. Install MySQL Server 8.0.23
+
+* Create a new database, e.g., `car_rental_db`
+* Create a user and grant necessary privileges
+
+### 4. Add MySQL Connector/J to Project
+
+* Download and include `mysql-connector-java-8.0.23.jar` in your classpath
+
+### 5. Include JasperReports Libraries
+
+* Add all necessary `.jar` files from JasperReports to your project's libraries
+
+### 6. Import Project in NetBeans IDE
+
+* Open Apache NetBeans IDE
+* Import or create a new Java project
+* Configure required libraries (JDBC, JasperReports)
+
+### 7. Configure Database Connection in Code
+
+Example JDBC settings in your Java source:
+
+```java
+String url = "jdbc:mysql://localhost:3306/car_rental_db";
+String user = "your_db_username";
+String password = "your_db_password";
+```
+
+### 8. Build and Run the Application
+
+* Use Apache Ant or NetBeans' build options
+* Run the `Main` class or the main entry point of the system
 
 ---
 
-###  3. Design the UI
-- Use drag-and-drop Form Designer  
-- Add controls from Toolbox (TextBox, Buttons, etc.)  
-- Use **TabControl** to create sections  
-- Double-click controls to add logic in `Form1.cs`  
+##  Additional Notes
+
+* Ensure MySQL server is running before launching the system
+* UI built using Java Swing (no separate installation needed)
+* Place JasperReports templates (`.jrxml` or `.jasper`) correctly in the project folder
+* Project supports modular tab-based navigation (Cars, Customers, Rentals, Payments, etc.)
 
 ---
 
-###  4. Build and Run
-- Build: `Ctrl + Shift + B`  
-- Run: `F5` or green Play button  
+##  Useful Links
 
----
-
-##  Notes
-
-- DB code is separate and integrated using ADO.NET (not included in GitHub version if not required)  
-- Crystal Reports used for invoice generation  
-- Guna.UI enhances the form appearance  
-
----
-
-##  Database Setup
-
-This project uses Microsoft SQL Server for data storage. Follow these steps to create and configure the database.
-
-### Prerequisites
-
-- Microsoft SQL Server installed (Express or Developer edition recommended)  
-- SQL Server Management Studio (SSMS) installed  
-  - Download SSMS here: https://aka.ms/ssms  
-
-### Steps to Set Up the Database
-
-1. **Open SSMS and Connect to SQL Server**  
-   - Launch SSMS  
-   - Connect to your server instance (e.g., localhost or .\SQLEXPRESS)  
-
-2. **Create the Database**  
-   - Right-click `Databases` → `New Database...`  
-   - Name it `CarRentalDB`  
-   - Click **OK**  
-
-3. **Create Tables**  
-   - Open a new query window  
-   - Run the SQL script
-
+| Tool/Library        | Version | Download Link                                                                                 |
+| ------------------- | ------- | --------------------------------------------------------------------------------------------- |
+| Oracle JDK          | 11.0.2  | [JDK Download](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)          |
+| Apache Ant          | 1.10.13 | [Ant Download](https://ant.apache.org/bindownload.cgi)                                        |
+| MySQL Server        | 8.0.23  | [MySQL Download](https://dev.mysql.com/downloads/mysql/8.0.html)                              |
+| MySQL Connector/J   | 8.0.23  | [Connector/J Download](https://dev.mysql.com/downloads/connector/j/)                          |
+| JasperReports       | 6.21.3  | [JasperReports Download](https://sourceforge.net/projects/jasperreports/files/jasperreports/) |
+| Apache NetBeans IDE | 23      | [NetBeans Download](https://netbeans.apache.org/download/nb23/)                               |
